@@ -110,8 +110,11 @@ const MediaPage = () => {
     try {
       const payload = { ...formData };
       if (payload._id) {
-        await updateMedia(payload._id, payload);
+        const id = payload._id;
+        delete payload._id;
+        await updateMedia(id, payload);
       } else {
+        delete payload._id;
         await createMedia(payload);
       }
       setShowModal(false);
