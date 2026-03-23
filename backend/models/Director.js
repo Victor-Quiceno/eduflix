@@ -1,4 +1,4 @@
-const { Schema, model } = require('mongoose');
+const { Schema, model } = require('mongoose'); // Esto es desestructuración para importar solo lo necesario de mongoose (Schema y model)
 
 const DirectorSchema = Schema({
     nombre: { type: String, required: true },

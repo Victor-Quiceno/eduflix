@@ -1,0 +1,76 @@
+:root {
+  --color-primary: #1e3a8a; /* Dark blue from generic corporate palette */
+  --color-secondary: #dc2626; /* Deep corporate red */
+  --color-light: #f8fafc; /* Very light gray for background */
+  --color-dark: #111827; /* Dark text */
+  --font-family-base: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+  font-family: var(--font-family-base);
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  margin: 0;
+  padding: 0;
+}
+
+/* Custom utility classes specifically to tap into our variables if needed */
+.text-corporate-blue {
+  color: var(--color-primary);
+}
+
+.bg-corporate-blue {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.text-corporate-red {
+  color: var(--color-secondary);
+}
+
+.bg-corporate-red {
+  background-color: var(--color-secondary);
+  color: white;
+}
+
+.btn-outline-corporate-red {
+  color: var(--color-secondary);
+  border-color: var(--color-secondary);
+}
+
+.btn-outline-corporate-red:hover {
+  background-color: var(--color-secondary);
+  color: white;
+}
+
+/* Clase unificada para los botones de acción premium */
+.btn-premium-action {
+  background-color: var(--color-secondary);
+  color: white;
+  transition: all 0.3s ease;
+}
+.btn-premium-action:hover {
+  background-color: #0f5132;
+  color: white;
+}
+
+/* Custom Hover Effects for Generos Module */
+.btn-blue-gray-hover {
+  background-color: var(--color-primary);
+  color: white;
+  transition: background-color 0.3s ease;
+}
+.btn-blue-gray-hover:hover {
+  background-color: #343a40 !important;
+  color: white !important;
+}
+
+.btn-blue-green-hover {
+  background-color: var(--color-primary);
+  color: white;
+  transition: background-color 0.3s ease;
+}
+.btn-blue-green-hover:hover {
+  background-color: #0f5132 !important;
+  color: white !important;
+}

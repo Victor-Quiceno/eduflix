@@ -7,7 +7,7 @@ const app = express();
 
 // Middlewares básicos
 app.use(cors()); // Permite peticiones cruzadas
-app.use(express.json()); // Permite leer JSON en el body de las peticiones
+app.use(express.json()); // Esto permite recibir JSON en el cuerpo de las solicitudes
 
 // Conexión a BD
 getConnection();
