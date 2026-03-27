@@ -121,7 +121,8 @@ const MediaPage = () => {
       loadAllData();
     } catch (error) {
       console.error('Fallo grave en la petición atómica transversal', error);
-      alert('Se produjo un cuello de botella al compilar la orden hacia la base en MongoDB.');
+      const backendError = error.response?.data?.msg || 'Error desconocido';
+      alert(`No se pudo procesar la solicitud (Problema detectado: ${backendError}).\n\nRevisa si hay campos duplicados o requerimientos faltantes. Original: "Se produjo un cuello de botella."`);
     }
   };
 
@@ -259,7 +260,7 @@ const MediaPage = () => {
                       <div className="row g-3 mt-2">
                         <div className="col-12">
                           <label className="form-label text-muted small fw-bold text-uppercase">RUTA DE LA PORTADA</label>
-                          <input type="text" className="form-control bg-white shadow-sm" name="imagen" placeholder="Ejemplo: capitan_america_cover.jpg" value={formData.imagen} onChange={handleChange} />
+                          <input type="text" className="form-control bg-white shadow-sm" name="imagen" placeholder="Ejemplo: capitan_america_cover.jpg" value={formData.imagen} onChange={handleChange} required />
                           <small className="text-secondary" style={{ fontSize: '0.75rem' }}></small>
                         </div>
                       </div>

@@ -14,8 +14,8 @@ const MediaSchema = Schema({
         unique: true // La URL de la película debe ser única
     },
     imagen: { type: String, required: true }, // URL de la portada
-    fechaCreacion: { type: Date, default: new Date() },
-    fechaActualizacion: { type: Date, default: new Date() },
+    fechaCreacion: { type: Date, default: Date.now },
+    fechaActualizacion: { type: Date, default: Date.now },
     anhioEstreno: { type: Number, required: true },
 
     // RELACIONES (Foreign Keys estilo NoSQL) 

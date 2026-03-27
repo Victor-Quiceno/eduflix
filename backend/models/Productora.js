@@ -5,8 +5,8 @@ const ProductoraSchema = Schema({
     estado: { type: String, required: true, enum: ['Activo', 'Inactivo'], default: 'Activo' },
     slogan: { type: String },
     descripcion: { type: String },
-    fechaCreacion: { type: Date, default: new Date() },
-    fechaActualizacion: { type: Date, default: new Date() }
+    fechaCreacion: { type: Date, default: Date.now },
+    fechaActualizacion: { type: Date, default: Date.now }
 });
 
 module.exports = model('Productora', ProductoraSchema);

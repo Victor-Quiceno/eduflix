@@ -3,8 +3,8 @@ const { Schema, model } = require('mongoose'); // Esto es desestructuración par
 const DirectorSchema = Schema({
     nombre: { type: String, required: true },
     estado: { type: String, required: true, enum: ['Activo', 'Inactivo'], default: 'Activo' },
-    fechaCreacion: { type: Date, default: new Date() },
-    fechaActualizacion: { type: Date, default: new Date() }
+    fechaCreacion: { type: Date, default: Date.now },
+    fechaActualizacion: { type: Date, default: Date.now }
 });
 
 module.exports = model('Director', DirectorSchema);
