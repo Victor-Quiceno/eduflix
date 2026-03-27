@@ -191,7 +191,7 @@ const MediaPage = () => {
                 <tbody>
                   {medias.length === 0 ? (
                     <tr>
-                      <td colSpan="4" className="text-center py-5 text-muted fw-bold">Esperando tu primer golpe de taquilla audiovisual.</td>
+                      <td colSpan="4" className="text-center py-5 text-muted fw-bold">No hay catálogo aun...</td>
                     </tr>
                   ) : (
                     medias.map((med) => (

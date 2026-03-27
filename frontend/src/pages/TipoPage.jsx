@@ -113,7 +113,7 @@ const TipoPage = () => {
                   {tipos.length === 0 ? (
                     <tr>
                       <td colSpan="4" className="text-center py-5 text-muted">
-                        Aún no tienes clasificaciones registradas, te invitamos a sumar la primera como Serie o Película.
+                        No hay clasificaciones registradas.
                       </td>
                     </tr>
                   ) : (
