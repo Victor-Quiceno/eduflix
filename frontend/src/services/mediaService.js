@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 // Define la url de conexión hacia el recurso remoto responsable de la librería de media.
-const API_URL = 'http://localhost:4000/api/media';
+const API_URL = '/api/media';
 
 // Extrae el listado transversal completo desde la base de datos.
 export const getMedia = async () => {

@@ -1,0 +1,27 @@
+# Orquestador de contenedores Docker para Eduflix
+# Ejecutar con: docker-compose up --build
+
+services:
+  # =============================================
+  # CONTENEDOR 1: Backend (Node.js + Express)
+  # =============================================
+  backend:
+    build: ./backend
+    container_name: eduflix-backend
+    ports:
+      - "4000:4000"
+    env_file:
+      - ./backend/.env
+    restart: unless-stopped
+
+  # =============================================
+  # CONTENEDOR 2: Frontend (React + Nginx)
+  # =============================================
+  frontend:
+    build: ./frontend
+    container_name: eduflix-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    restart: unless-stopped

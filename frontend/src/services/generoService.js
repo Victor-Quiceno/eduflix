@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 // Define la url base del backend para los géneros.
-const API_URL = 'http://localhost:4000/api/generos';
+const API_URL = '/api/generos';
 
 // Retorna la lista de todos los géneros usando una petición de lectura.
 export const getGeneros = async () => {

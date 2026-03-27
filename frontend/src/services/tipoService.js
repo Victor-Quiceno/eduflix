@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 // Define la url de conexión hacia el recurso remoto en tu backend.
-const API_URL = 'http://localhost:4000/api/tipos';
+const API_URL = '/api/tipos';
 
 // Extrae el listado completo de tipos desde el servidor activo.
 export const getTipos = async () => {

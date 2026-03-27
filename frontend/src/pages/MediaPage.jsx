@@ -289,7 +289,7 @@ const MediaPage = () => {
                       <div className="mb-4">
                         <label className="form-label text-dark small fw-bold text-uppercase">➯ CATEGORÍA</label>
                         <select className="form-select shadow-sm" name="genero" value={formData.genero} onChange={handleChange} required>
-                          <option value="">Apunta a un género...</option>
+                          <option value="">Selecciona un genero</option>
                           {generosActivos.map(g => <option key={g._id} value={g._id}>{g.nombre}</option>)}
                         </select>
                       </div>

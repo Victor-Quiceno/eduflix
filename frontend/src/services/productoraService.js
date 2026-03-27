@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 // Dirección estática hacia nuestra api de productoras.
-const API_URL = 'http://localhost:4000/api/productoras';
+const API_URL = '/api/productoras';
 
 // Consulta el servidor remoto para traer el arreglo de productoras existentes.
 export const getProductoras = async () => {

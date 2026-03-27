@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 // Define la url base del backend para los directores.
-const API_URL = 'http://localhost:4000/api/directores';
+const API_URL = '/api/directores';
 
 // Retorna la lista de todos los directores usando una petición de lectura.
 export const getDirectores = async () => {
