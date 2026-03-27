@@ -297,7 +297,7 @@ const MediaPage = () => {
                       <div className="mb-4 pt-2">
                         <label className="form-label text-dark small fw-bold text-uppercase">➯ DIRECTOR</label>
                         <select className="form-select shadow-sm" name="director" value={formData.director} onChange={handleChange} required>
-                          <option value="">Selección en firme...</option>
+                          <option value="">Selecciona un director</option>
                           {directoresActivos.map(d => <option key={d._id} value={d._id}>{d.nombre}</option>)}
                         </select>
                       </div>
